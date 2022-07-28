@@ -1,0 +1,197 @@
+Skip to content
+DEV Community
+Search...
+
+Log in
+Create account
+
+13
+
+2
+
+16
+
+Cover image for How to create a digital clock in JavaScript
+Stackfindover
+Stackfindover
+Posted on Mar 23, 2021 • Updated on May 17, 2021
+
+How to create a digital clock in JavaScript
+#
+html
+#
+css
+#
+javascript
+#
+beginners
+Hello, guys in this tutorial we will create a digital clock using HTML CSS, and JavaScript.
+
+Common Query
+how to make a digital clock in JavaScript
+how to write a digital clock in JavaScript
+code for the digital clock in JavaScript
+Hello, guys In this tutorial we will try to solve above mention query. and also we will learn how to create a digital clock using HTML CSS, and JavaScript.
+
+First, we need to create three files index.html and style.css then we need to do code for it.
+
+Digital clock Step:1
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Digital clock using javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>  
+    <div class="wrapper">
+      <div id="digital_clock" class="glow">00:00:00</div>
+    </div>
+    <script>
+      setInterval(showTime, 1000);
+
+      function showTime(){
+        let time = new Date();
+        let hr = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+        AMPM = 'AM'; 
+
+      if(hr > 12) {
+        hr -= 12;
+        AMPM = "PM";
+      }
+      if(hr == 0) {
+        hr = 12;
+        AMPM = "AM";
+      }
+
+      hr = hr < 10 ? "0" + hr : hr;
+      min = min < 10 ? "0" + min : min;
+      sec = sec < 10 ? "0" + sec : sec;
+
+      let curentTime = hr + ":" + min + ":" + sec + AMPM; 
+
+      document.getElementById('digital_clock').innerHTML = curentTime;
+
+    }
+    showTime();
+    </script>
+  </body>
+</html>
+Digital clock Step:2
+Then we need to add code for style.css which code I provide in the below screen.
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000;
+}
+.glow {
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #534dff, 0 0 40px #534dff, 0 0 50px #534dff, 0 0 60px #534dff, 0 0 70px #534dff;
+  }
+}
+Digital clock Video Output:
+
+Digital clock Codepen Output:
+
+
+Discussion (0)
+Subscribe
+pic
+Add to the discussion
+Code of Conduct • Report abuse
+Read next
+areedev profile image
+Remote Work Tip!
+Areeba Farooq - Jul 20
+
+ndrohith profile image
+Analog Input using Arduino
+Rohith ND - Jul 20
+
+bikramjeetsarmah profile image
+ECOMMERCE Website Using MERN Part-6.3.1 ( Authentication { Token Generation} )
+Bikramjeet Sarmah - Jul 1
+
+mhsagor110090 profile image
+Node JS Resize Image Before Upload using Multer Sharp
+Mehedi Hasan Sagor - Jun 26
+
+
+Stackfindover
+Follow
+Hii i'm Rahul Jangir, a tech geek, designing enthusiast and an online expert, graduated in technology who is addicted to front-end development.
+LOCATION
+India
+JOINED
+Dec 14, 2020
+More from Stackfindover
+Git commands cheat sheet 2022
+#git #webdev #beginners #programming
+35+ HTML 404 Page Templates
+#webdev #beginners #javascript #tutorial
+Lenny Face ( ‿ ) — All Text Faces Copy and Paste.
+#javascript #webdev #beginners #tutorial
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000;
+}
+.glow {
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #534dff, 0 0 40px #534dff, 0 0 50px #534dff, 0 0 60px #534dff, 0 0 70px #534dff;
+  }
+}
+DEV Community — A constructive and inclusive social network for software developers. With you every step of your journey.
+
+Built on Forem — the open source software that powers DEV and other inclusive communities.
+
+Made with love and Ruby on Rails. DEV Community © 2016 - 2022.

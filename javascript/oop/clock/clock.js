@@ -22,7 +22,7 @@ setInterval(showTime, 1000);
 
       let curentTime = hr + ":" + min + ":" + sec + AMPM; 
 
-      document.getElementById('digital_clock').innerHTML = curentTime;
+      document.getElementById('clock').innerHTML = curentTime;
 
     }
     showTime();
